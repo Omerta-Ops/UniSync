@@ -143,12 +143,12 @@ npm start
 
 We sincerely thank the individuals who contributed to building **UniSync**:
 
-* **[Bhavya Agarwal](https://github.com/bhavyawork121)**
-* **[Arin Dixit](https://github.com/ArinDixit06)**
-* **[Diwanshu Yadav](https://github.com/DiwanshuYadav)**
-* **[Akanksha Anand](https://github.com/Akanksha-Anand1)**
-* **[Khyati Sharma](https://github.com/Khyatishxrma)**
-* **[Ojasvi Singh](https://github.com/Ojasviisinghh)**
+* **[Bhavya Agarwal](https://github.com/bhavyawork121)**  Authentication & Database
+* **[Arin Dixit](https://github.com/ArinDixit06)**  Backend AI Archetecture
+* **[Diwanshu Yadav](https://github.com/DiwanshuYadav)**  Backend Core & API Handling
+* **[Akanksha Anand](https://github.com/Akanksha-Anand1)**  UI/UX Designing and Documentation
+* **[Khyati Sharma](https://github.com/Khyatishxrma)**  Frontend 
+* **[Ojasvi Singh](https://github.com/Ojasviisinghh)**  Frontend
 
 ---
 
