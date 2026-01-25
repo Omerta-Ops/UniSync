@@ -1,0 +1,122 @@
+direction right
+textSize large
+title UniSync - Centralized Communication Hub Architecture
+
+// Frontend Layer
+Frontend [icon: react, color: blue] {
+  React Dashboard [icon: monitor, label: "Unified Dashboard"]
+  Auth UI [icon: lock, label: "Firebase Auth UI"]
+}
+
+// Authentication & Identity
+Firebase Auth [icon: firebase, label: "Firebase Authentication"]
+
+// API Gateway Layer
+API Layer [icon: server, color: green] {
+  FastAPI Backend [icon: fastapi, label: "FastAPI Orchestrator"]
+  API Routes [icon: git-branch, label: "Route Handler"]
+}
+
+// Email Protocol Aggregation
+Email Ingestion [icon: mail, color: purple] {
+  IMAP Connector [icon: inbox, label: "IMAP Protocol"]
+  SMTP Connector [icon: send, label: "SMTP Protocol"]
+  Graph API Connector [icon: azure-microsoft-365, label: "Microsoft Graph API"]
+}
+
+// Async Processing Layer
+Async Workers [icon: cpu, color: orange] {
+  Celery Workers [icon: settings, label: "Celery Task Queue"]
+  Redis Broker [icon: redis, label: "Redis Message Broker"]
+}
+
+// AI/ML Processing Pipelines
+AI Processing [icon: cpu, color: red] {
+  LangChain Orchestrator [icon: link, label: "LangChain Interface"]
+  
+  NLP Pipeline [icon: file-text, color: blue] {
+    Summarization Engine [icon: align-left, label: "3-Bullet Brief Generator"]
+    Thread Analyzer [icon: layers, label: "Thread Distillation"]
+  }
+  
+  Security Pipeline [icon: shield, color: red] {
+    Header Analyzer [icon: search, label: "Header Analysis"]
+    Phishing Detector [icon: alert-triangle, label: "Phishing Pattern Matcher"]
+    Risk Scorer [icon: activity, label: "Real-time Risk Scoring"]
+  }
+}
+
+// LLM Provider
+LLM Provider [icon: openai, label: "Large Language Model"]
+
+// Event Extraction & Calendar Sync
+Event Processing [icon: calendar, color: yellow] {
+  Entity Extractor [icon: clock, label: "Temporal Entity Parser"]
+  Date Time Parser [icon: watch, label: "Date/Time Extraction"]
+  Calendar Sync Service [icon: refresh-cw, label: "Event Synchronizer"]
+}
+
+// External Calendar Integration
+Google Calendar API [icon: google-calendar, label: "Google Calendar API"]
+
+// Data Persistence Layer
+Data Layer [icon: database, color: gray] {
+  Supabase [icon: supabase, label: "Supabase (PostgreSQL)"] {
+    User Data [icon: users, label: "User Profiles"]
+    Email Store [icon: archive, label: "Email Cache"]
+    Risk Logs [icon: file, label: "Security Audit Logs"]
+    Event Store [icon: bookmark, label: "Calendar Events"]
+  }
+}
+
+// Connections - Frontend to Auth
+React Dashboard > Auth UI: user login
+Auth UI <> Firebase Auth: authenticate user
+Firebase Auth > FastAPI Backend: JWT token validation
+
+// Frontend to Backend
+FastAPI Backend > API Routes: route requests
+
+// Email Ingestion Flow
+API Routes > IMAP Connector: fetch emails
+API Routes > SMTP Connector: send emails
+API Routes > Graph API Connector: Microsoft 365 sync
+IMAP Connector > Celery Workers: queue processing
+SMTP Connector > Celery Workers: queue outbound
+Graph API Connector > Celery Workers: queue sync
+
+// Async Processing
+Celery Workers <> Redis Broker: task distribution
+
+// AI Processing Flow
+Celery Workers > LangChain Orchestrator: trigger AI analysis
+
+// NLP Summarization Pipeline
+LangChain Orchestrator > Thread Analyzer: analyze threads
+Thread Analyzer > Summarization Engine: generate briefs
+Summarization Engine <> LLM Provider: NLP inference
+
+// Security Analysis Pipeline
+LangChain Orchestrator > Header Analyzer: parse headers
+Header Analyzer > Phishing Detector: pattern matching
+Phishing Detector > Risk Scorer: calculate risk
+Risk Scorer <> LLM Provider: security inference
+
+// Event Extraction Flow
+Celery Workers > Entity Extractor: parse email content
+Entity Extractor > Date Time Parser: extract temporal data
+Date Time Parser > Calendar Sync Service: prepare events
+Calendar Sync Service > Google Calendar API: create/update events
+
+// Data Persistence Connections
+FastAPI Backend <> Supabase: CRUD operations
+Summarization Engine > Email Store: store summaries
+Risk Scorer > Risk Logs: log security events
+Calendar Sync Service > Event Store: persist events
+Firebase Auth > User Data: sync user profiles
+
+// Return data to frontend
+Frontend <> API Layer: REST API calls
+API Layer > Frontend: render data
+Celery Workers <-- Redis Broker: job notifications
+FastAPI Backend < Supabase: query results
