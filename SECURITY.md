@@ -21,7 +21,7 @@ If you choose email, please encrypt your message using our PGP key and include t
 
 PGP public key (placeholder):
 
------BEGIN PGP PUBLIC KEY BLOCK-----
+--BEGIN PGP PUBLIC KEY BLOCk--
 Version: Placeholder
 
 mQENBFu...REPLACE_WITH_REAL_KEY...IDAQAB
