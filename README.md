@@ -32,8 +32,7 @@ Traditional spam filters are silent protectors. They move threats to a folder wi
 Aggregate Gmail, Outlook, and `.edu` accounts into a single cohesive stream. Using a unified schema, UniSync treats every account as a data source—allowing you to search and manage your entire digital life from one minimalist interface.
 
 ### Smart Extraction Engine
-
-Transform passive reading into active execution using **Context-Aware Extraction** powered by **LangChain**:
+Turn passive reading into actionable workflows with context-aware extraction, powered by LangChain.
 
 * **Deadlines:** Automatically sync assignment dates to your calendar
 * **Action Items:** Convert vague requests into a prioritized task list
