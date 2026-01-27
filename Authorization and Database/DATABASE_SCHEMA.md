@@ -1,8 +1,8 @@
-# 🗄️ UniSync Database Documentation
+# UniSync Database Documentation
 
 This document explicitly defines the database schema and storage architecture for the UniSync application.
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 The system uses a **Hybrid Storage Model**:
 1.  **Structured Data** (Metadata, User Info, Tokens) is stored in **Supabase/PostgreSQL**.
@@ -10,7 +10,7 @@ The system uses a **Hybrid Storage Model**:
 
 ---
 
-## 💾 Storage Buckets
+## Storage Buckets
 
 ### `unisync-files`
 This is a **Private** Supabase Storage bucket.
@@ -21,7 +21,7 @@ This is a **Private** Supabase Storage bucket.
 
 ---
 
-## 📐 Database Schema
+## Database Schema
 
 ### 1. `profiles`
 **Purpose**: Stores the core identity of the student.
@@ -66,7 +66,7 @@ This is a **Private** Supabase Storage bucket.
 
 ---
 
-## 🔗 Entity Relationship Diagram
+## Entity Relationship Diagram
 
 ```mermaid
 erDiagram
@@ -93,3 +93,4 @@ erDiagram
         text bucket_id
     }
 ```
+
