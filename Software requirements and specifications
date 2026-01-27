@@ -1,0 +1,93 @@
+# UniSync 📬🤖
+
+UniSync is a web-based platform designed to centralize and intelligently manage student communication by unifying multiple email accounts, summarizing content using AI, detecting phishing attempts, and syncing important deadlines to calendars.
+
+---
+
+## 🚩 Problem Statement
+
+University students manage multiple email accounts (personal, academic, internship), leading to inbox overload, missed deadlines, and increased vulnerability to phishing attacks. Existing email clients lack intelligent prioritization and student-focused automation.
+
+---
+
+## 💡 Solution
+
+UniSync acts as a middleware layer between email providers (Gmail, Outlook) and the user, offering:
+
+- A unified inbox
+- AI-powered email summaries
+- Security risk analysis
+- Automatic deadline extraction and calendar sync
+
+---
+
+## ✨ Key Features
+
+- 🔐 **Unified Authentication**
+  - Login using Google / Email
+  - Link multiple Gmail and Outlook accounts via OAuth 2.0
+
+- 📥 **Unified Inbox Dashboard**
+  - Chronologically sorted emails from all linked accounts
+  - Archive (soft delete) support
+
+- 🤖 **AI Email Summarization**
+  - Each email thread summarized into **exactly 3 bullet points**
+  - Cached summaries to reduce API cost
+
+- 🛡️ **Phishing & Security Analysis**
+  - Email header and content analysis
+  - Risk scoring: Low / Medium / High
+  - Warning banners for suspicious emails
+
+- 📅 **Automated Calendar Sync**
+  - Extracts dates and times from emails
+  - Suggests events that can be added to Google Calendar
+
+---
+
+## 🏗️ System Architecture (High Level)
+
+- **Frontend**: Single Page Application (SPA)
+- **Backend**: REST API with async task queue
+- **AI Layer**: LLM-powered analysis and summarization
+- **Database**: Secure storage of metadata and summaries
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React (Vite)
+- Tailwind CSS
+- Zustand (State Management)
+
+### Backend
+- Python (FastAPI)
+- Celery + Redis (Async tasks)
+
+### AI / ML
+- LangChain
+- OpenAI API (or local LLM)
+
+### Authentication & Database
+- Firebase Authentication
+- Supabase (PostgreSQL)
+
+---
+
+## 🚀 Getting Started (Basic)
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/unisync.git
+
+# Frontend
+cd frontend
+npm install
+npm run dev
+
+# Backend
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
