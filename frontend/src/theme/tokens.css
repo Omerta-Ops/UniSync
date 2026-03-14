@@ -1,0 +1,114 @@
+/*
+ * UniSync Design Tokens
+ * Extracted from the existing login page design system.
+ * All colors, typography, spacing, shadows, and transitions codified.
+ * These are the ONLY design values that should be used across the app.
+ */
+
+:root {
+  /* ── Brand Colors ──────────────────────────────────────── */
+  --uni-cyan-500: #06B6D4;
+  --uni-cyan-400: #22D3EE;
+  --uni-cyan-300: #67E8F9;
+  --uni-blue-600: #2563EB;
+  --uni-blue-500: #3B82F6;
+  --uni-purple-600: #9333EA;
+
+  /* ── Gradient Definitions ──────────────────────────────── */
+  --uni-gradient-primary: linear-gradient(to right, var(--uni-cyan-500), var(--uni-blue-600));
+  --uni-gradient-primary-hover: linear-gradient(to right, var(--uni-cyan-400), var(--uni-blue-500));
+  --uni-gradient-accent: linear-gradient(to bottom right, var(--uni-cyan-400), var(--uni-blue-500), var(--uni-purple-600));
+  --uni-gradient-bg: linear-gradient(to bottom right, #000000, #111827, #000000);
+
+  /* ── Surface Colors ────────────────────────────────────── */
+  --uni-bg-dark: #000000;
+  --uni-bg-dark-mid: #111827;
+  --uni-surface-glass: rgba(255, 255, 255, 0.1);
+  --uni-surface-glass-hover: rgba(255, 255, 255, 0.15);
+  --uni-surface-elevated: rgba(255, 255, 255, 0.05);
+
+  /* ── Text Colors ───────────────────────────────────────── */
+  --uni-text-primary: #FFFFFF;
+  --uni-text-secondary: rgba(255, 255, 255, 0.8);
+  --uni-text-muted: rgba(255, 255, 255, 0.6);
+  --uni-text-subtle: rgba(255, 255, 255, 0.4);
+  --uni-text-hint: rgba(255, 255, 255, 0.7);
+
+  /* ── Border Colors ─────────────────────────────────────── */
+  --uni-border-glass: rgba(255, 255, 255, 0.2);
+  --uni-border-subtle: rgba(255, 255, 255, 0.1);
+  --uni-border-focus: rgba(34, 211, 238, 0.5);
+
+  /* ── State Colors ──────────────────────────────────────── */
+  --uni-success: #10B981;
+  --uni-warning: #F59E0B;
+  --uni-error: #EF4444;
+  --uni-info: var(--uni-cyan-500);
+
+  /* ── Risk Colors ───────────────────────────────────────── */
+  --uni-risk-low: #10B981;
+  --uni-risk-medium: #F59E0B;
+  --uni-risk-high: #EF4444;
+
+  /* ── Shadows ───────────────────────────────────────────── */
+  --uni-shadow-glow: 0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.15);
+  --uni-shadow-button: 0 10px 25px -5px rgba(6, 182, 212, 0.3);
+  --uni-shadow-button-hover: 0 10px 25px -5px rgba(6, 182, 212, 0.5);
+  --uni-shadow-card: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --uni-shadow-elevated: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+
+  /* ── Typography ────────────────────────────────────────── */
+  --uni-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --uni-font-size-xs: 0.75rem;     /* 12px */
+  --uni-font-size-sm: 0.875rem;    /* 14px */
+  --uni-font-size-base: 1rem;      /* 16px */
+  --uni-font-size-lg: 1.125rem;    /* 18px */
+  --uni-font-size-xl: 1.25rem;     /* 20px */
+  --uni-font-size-2xl: 1.5rem;     /* 24px */
+  --uni-font-size-3xl: 1.875rem;   /* 30px */
+  --uni-font-size-4xl: 2.25rem;    /* 36px */
+  --uni-font-size-6xl: 3.75rem;    /* 60px */
+  --uni-font-weight-light: 300;
+  --uni-font-weight-normal: 400;
+  --uni-font-weight-medium: 500;
+  --uni-font-weight-semibold: 600;
+  --uni-font-weight-bold: 700;
+
+  /* ── Border Radius ─────────────────────────────────────── */
+  --uni-radius-sm: 0.375rem;       /* 6px */
+  --uni-radius-md: 0.5rem;         /* 8px */
+  --uni-radius-lg: 0.75rem;        /* 12px */
+  --uni-radius-xl: 1rem;           /* 16px */
+  --uni-radius-2xl: 1.25rem;       /* 20px */
+  --uni-radius-3xl: 1.5rem;        /* 24px */
+  --uni-radius-full: 9999px;
+
+  /* ── Spacing Scale ─────────────────────────────────────── */
+  --uni-space-1: 0.25rem;          /* 4px */
+  --uni-space-2: 0.5rem;           /* 8px */
+  --uni-space-3: 0.75rem;          /* 12px */
+  --uni-space-4: 1rem;             /* 16px */
+  --uni-space-5: 1.25rem;          /* 20px */
+  --uni-space-6: 1.5rem;           /* 24px */
+  --uni-space-8: 2rem;             /* 32px */
+  --uni-space-10: 2.5rem;          /* 40px */
+  --uni-space-12: 3rem;            /* 48px */
+
+  /* ── Transitions ───────────────────────────────────────── */
+  --uni-transition-fast: 150ms ease;
+  --uni-transition-normal: 200ms ease;
+  --uni-transition-slow: 300ms ease;
+  --uni-transition-spring: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Backdrop ──────────────────────────────────────────── */
+  --uni-backdrop-blur: blur(16px);
+  --uni-backdrop-blur-xl: blur(24px);
+
+  /* ── Z-Index Scale ─────────────────────────────────────── */
+  --uni-z-sidebar: 40;
+  --uni-z-topbar: 45;
+  --uni-z-modal-backdrop: 50;
+  --uni-z-modal: 51;
+  --uni-z-toast: 60;
+  --uni-z-animated-border: 100;
+}
